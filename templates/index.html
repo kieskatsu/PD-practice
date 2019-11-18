@@ -1,0 +1,72 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	{% block customcss %}
+	<link rel='stylesheet' type='text/css' href="{% static 'css/hp-style.css' %}">
+	{% endblock customcss %}
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-dT8WZNLW+WmnMquYY8GD+px5+PPMy/Rz1pZTBuLQv7EfAZG0xhipTd08JFVCf8bp" crossorigin="anonymous">
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet"><!--これはFont Awesomeのリンク-->
+</head>
+<body>
+	<header>
+		<div class="head_sp">
+			<div class = "head_sb1">GudaGuda</div>
+			<a class ="head_sb2" href = "#unei">運営組織</a>
+			<a class ="head_sb2" href = "{% url 'ranking' %}">ランキング</a>
+			<a class ="head_sb2" href = "#sanka">参加方法</a>
+			<a class ="head_sb2" href = "#katudou">活動内容</a>
+		</div>
+	</header>
+	<div class="image1">写真1</div>
+	<div class="active">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-5">
+					<div class="active1" id = "katudou">&nbsp;&nbsp;活動内容</div>
+					<div class="active_contents">
+					私達は金沢工業大学のProjectDesignという授業で金沢市のゴミのポイ捨てを減らすという課題を解決するため活動を行い、その結果Twitterを用いたゴミのポイ捨てを監視するキャンペーンを企画しました。</div>
+				</div>
+				<div class = "col-sm-1"></div>
+				<div class="col-sm-5">
+		<div class="active1">&nbsp;&nbsp;キャンペーン内容</div>
+        <div class="active_contents">
+		キャンペーンの内容はTwitterで＃をつけてポイ捨てされたゴミの写真を投稿することで、そのデータを活用し、ゴミを減らすというものです。写真の投稿者にはポイントが入り、ランキングサイトにてランキングを発表し、上位の方には商品を用意しております。</div></div>
+	</div><br><br><br>
+	<div class="method" id = "sanka">
+		<div style="font-weight:bold;font-size:280%;align-items:center;display:flex;justify-content:center;">
+			3ステップで気軽にボランティア
+		</div><br><br>
+		<div class="container">
+		<div class="row">
+		<div class="col-sm-4">
+		<div class = "method1">
+			<div class="methodtitle">ポイ捨てされたゴミを撮影</div><br>
+			街におちているゴミをスマホなどで<br>撮影！
+		</div></div>
+		<div class="col-sm-4">
+		<div class = "method1">
+			<div class="methodtitle">   Twitterに写真を投稿 <img src="{% static 'media/bard.png' %}"></div><br>
+			Twitterに撮影したゴミの写真を#を<br>つけて投稿！
+		</div></div>
+		<div class="col-sm-4">
+		<div class="method1">
+			<div class="methodtitle">ランキングサイトを確認</div><br>
+			ランキングサイトで自分のランキングを確認し、順位に応じて景品Get！
+		</div>
+	    </div>
+	</div>
+	</div>
+	</div>
+	<hr>
+	<div class = "group" id="unei">金沢工業大学(Kanazawa Institute of Technology)<br>ProjectDesign実践H-1(Team:GudaGuda)</div>
+	<br>
+	<br>
+
+
+
+</body>
+</html>
+

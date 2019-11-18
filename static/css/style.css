@@ -1,0 +1,43 @@
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+.split{
+	display: table;
+	width: 100%;
+}
+.split-item{
+	display: table-cell;
+	padding: 80px;
+	width: 50%;
+}
+.split-left{
+	background: #000;
+	color: #fff;
+	position: relative;
+}
+.split-left__inner{
+	height: 100%;
+	position: fixed;
+	width: 50%;
+}
+.split-right__inner{
+	height: 8000px;
+}
+/**********************************************
+max-width:1024px
+**********************************************/
+@media screen and (max-width:1024px) {
+	.split{
+		display: block;
+	}
+	.split-item{
+		display: block;
+		width: auto;
+	}
+	.split-left__inner{
+		position: inherit;
+		width: auto;
+	}
+}

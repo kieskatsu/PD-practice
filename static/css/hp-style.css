@@ -1,0 +1,82 @@
+.head_sp{
+	background-color:black;
+	height:80px;
+}
+.head_sb1{
+	float:left;
+	width:300px;
+	font-size:50px;
+	color:white;
+	font-weight:bold;
+	height:80px;
+	align-items:center;
+	display:flex;
+	justify-content:center;
+
+}
+
+.head_sb2{
+	background-color:black;
+	text-decoration: none;
+	height:80px;
+	width:120px;
+	font-size:19px;
+	display:flex;
+	float:right;
+	font-weight:bolder;
+	align-items:center;
+  	justify-content: center;
+}
+.head_sb2:link, .head_sb2:visited, .head_sb2:hover, .head_sb2:active {
+  color: white;
+  text-decoration:none;
+}
+
+.head_sb2:hover{
+	border-bottom:solid white;
+}
+.image1{
+	height:400px;
+	background-color:skyblue;
+	font-size:50px;
+}
+.active{
+	height:200px;
+
+}
+.active1{
+
+  font-size:170%;
+  font-weight:bold;
+  align-items:center;
+  justify-content:center;
+  display:flex;
+
+
+}
+
+.active_contents{
+color:;
+font-size:18px;
+justify-content:center;
+display:flex;
+
+}
+.method{
+	height:250px;
+}
+.methodtitle{
+	font-size:125%;
+    font-weight:bold;
+    align-items:center;
+  justify-content:center;
+  display:flex;
+
+}
+.method1{
+    font-size:20px;
+
+}
+.group{
+	font-size:18px;
+}

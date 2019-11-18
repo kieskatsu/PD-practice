@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block customcss %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+{% endblock customcss %}
+
+{% block content %}
+<div class="container">
+        {{ return_object.embed_code | safe }}
+    <div class="judge">
+{% if error %}
+{{ error }}
+{% endif %}
+        <form action="{% url 'evaluate' return_object.screen_name %}" method="POST"> {% csrf_token %}
+            <button type="submit" name="judge" class="btn btn-primary btn-lg" value='True'>かわいい</button>
+            <button type="submit" name="judge" class="btn btn-secondary btn-lg" value='False'>かわいくない</button>
+        </form>
+    </div>
+    <a href="{% url 'ranking' %}">戻る</a>
+</div>
+
+{% endblock content %}

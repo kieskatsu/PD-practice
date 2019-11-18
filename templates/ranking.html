@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block customcss %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+{% endblock customcss %}
+
+{% block content %}
+<header></header>
+<div class="content-wrapper">
+    <table width="100%">
+    <tr>
+    <td width="30%" align="center" valign="top">
+        <div class="item"></div>
+        <div class="judge container">
+            <a href="{% url 'judge' %}">> 判定しにいく</a>
+        </div>
+    </td>
+    <td class= "div-border"></td>
+    <td width="70%" align="center" valign="top">
+        <div class="ranking container">
+            {% for user in object_list|slice:"10" %}
+                {% if forloop.counter == 1 %}
+                    <div class="alert alert-warning" role="alert">
+                {% elif forloop.counter == 2 %}
+                    <div class="alert alert-secondary" role="alert">
+                {% else %}
+                    <div class="alert alert-info" role="alert">
+                {% endif %}
+                    <p><span class="rank">{{forloop.counter}}</span> &nbsp; &nbsp; {{user.name}}@{{user.screen_name}} &emsp; &emsp; {{user.point}}ポイント</p>
+                    </div>
+            {% endfor %}
+        </div>
+    </td>
+    </tr>
+    </table>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+<title>サンプル2</title>
+{% load static %}
+
+{% block customcss %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+{% endblock customcss %}
+
+{% block content %}
+<div class="split">
+    <div class="split-item split-left">
+        <div class="split-left__inner">
+            left
+        </div>
+    </div>
+    <div class="split-item split-right">
+        <div class="split-right__inner">
+            right
+        </div>
+    </div>
+</div>
+{% endblock content %}
