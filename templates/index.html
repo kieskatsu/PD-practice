@@ -1,16 +1,12 @@
+{% extends 'base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width,initial-scale=1">
-	{% block customcss %}
-	<link rel='stylesheet' type='text/css' href="{% static 'css/hp-style.css' %}">
-	{% endblock customcss %}
-	<link href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-dT8WZNLW+WmnMquYY8GD+px5+PPMy/Rz1pZTBuLQv7EfAZG0xhipTd08JFVCf8bp" crossorigin="anonymous">
-    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet"><!--これはFont Awesomeのリンク-->
-</head>
-<body>
+
+{% block customcss %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/phone.css' %}" media="(max-width: 600px)">
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" media="(min-width:600px)" >
+{% endblock customcss %}
+
+{% block content %}
 	<header>
 		<div class="head_sp">
 			<div class = "head_sb1">GudaGuda</div>
@@ -20,7 +16,7 @@
 			<a class ="head_sb2" href = "#katudou">活動内容</a>
 		</div>
 	</header>
-	<div class="image1">写真1</div>
+	<div class="image1">写真１</div>
 	<div class="active">
 		<div class="container">
 			<div class="row">
@@ -36,37 +32,36 @@
 		キャンペーンの内容はTwitterで＃をつけてポイ捨てされたゴミの写真を投稿することで、そのデータを活用し、ゴミを減らすというものです。写真の投稿者にはポイントが入り、ランキングサイトにてランキングを発表し、上位の方には商品を用意しております。</div></div>
 	</div><br><br><br>
 	<div class="method" id = "sanka">
-		<div style="font-weight:bold;font-size:280%;align-items:center;display:flex;justify-content:center;">
+		<div class="threestep">
 			3ステップで気軽にボランティア
-		</div><br><br>
+		</div>
 		<div class="container">
 		<div class="row">
 		<div class="col-sm-4">
 		<div class = "method1">
 			<div class="methodtitle">ポイ捨てされたゴミを撮影</div><br>
-			街におちているゴミをスマホなどで<br>撮影！
+			<div  style="align-items:center;justify-content:center;display:flex;">
+			街におちているゴミをスマホなどで<br>撮影！</div>
 		</div></div>
 		<div class="col-sm-4">
 		<div class = "method1">
-			<div class="methodtitle">   Twitterに写真を投稿 <img src="{% static 'media/bard.png' %}"></div><br>
-			Twitterに撮影したゴミの写真を#を<br>つけて投稿！
+			<div class="methodtitle">&nbsp;Twitterに写真を投稿 <img src="bard.png"></div><br>
+			<div  style="align-items:center;justify-content:center;display:flex;">Twitterに撮影したゴミの写真を#をつけて投稿！</div>
 		</div></div>
 		<div class="col-sm-4">
 		<div class="method1">
 			<div class="methodtitle">ランキングサイトを確認</div><br>
+			<div  style="align-items:center;justify-content:center;display:flex;">
 			ランキングサイトで自分のランキングを確認し、順位に応じて景品Get！
-		</div>
+		</div></div>
 	    </div>
 	</div>
 	</div>
 	</div>
+
 	<hr>
 	<div class = "group" id="unei">金沢工業大学(Kanazawa Institute of Technology)<br>ProjectDesign実践H-1(Team:GudaGuda)</div>
 	<br>
 	<br>
 
-
-
-</body>
-</html>
-
+{% endblock content %}

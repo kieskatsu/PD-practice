@@ -1,11 +1,11 @@
 .head_sp{
 	background-color:black;
-	height:80px;
+	height:160px;
 }
-
 .head_sb1{
-	float:left;
-	width:300px;
+	clear:both;
+	width:100%;
+
 	font-size:50px;
 	color:white;
 	font-weight:bold;
@@ -15,17 +15,17 @@
 	justify-content:center;
 
 }
-
 .head_sb2{
 	text-decoration: none;
 	height:80px;
-	width:120px;
+	width:25%;
 	font-size:18px;
 	display:flex;
 	float:right;
 	font-weight:bolder;
 	align-items:center;
   	justify-content: center;
+
 }
 .head_sb2:link, .head_sb2:visited, .head_sb2:hover, .head_sb2:active {
   color: white;
@@ -33,9 +33,10 @@
   
 }
 .head_sb2:hover{
-	border-bottom:solid white;
+	border-bottom:solid 3px white;
 }
 .image1{
+
 	height:400px;
 	background-color:skyblue;
 	font-size:50px;
@@ -62,17 +63,15 @@ justify-content:center;
 display:flex;
 
 }
-.threestep
-{
-	height:100px;
+.threestep{
 	font-weight:bold;
-	font-size:280%;
+	font-size:160%;
 	align-items:center;
 	display:flex;
 	justify-content:center;
 }
 .method{
-	height:290px;
+	height:650px;
 }
 .methodtitle{
 	font-size:125%;
@@ -83,6 +82,7 @@ display:flex;
 
 }
 .method1{
+	margin-top:25px;
     font-size:19px;
     box-shadow: 2px 2px 4px #dddddd;
     border-radius:5px;

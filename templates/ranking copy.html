@@ -10,12 +10,22 @@
 <div class="split">
     <div class="split-item split-left">
         <div class="split-left__inner">
-            left
+            <a href="{% url 'judge' %}">> 判定しにいく</a>
         </div>
     </div>
     <div class="split-item split-right">
         <div class="split-right__inner">
-            right
+            {% for user in object_list|slice:"10" %}
+                {% if forloop.counter == 1 %}
+                    <div class="alert alert-warning" role="alert">
+                {% elif forloop.counter == 2 %}
+                    <div class="alert alert-secondary" role="alert">
+                {% else %}
+                    <div class="alert alert-info" role="alert">
+                {% endif %}
+                    <p><span class="rank">{{forloop.counter}}</span> &nbsp; &nbsp; {{user.name}}@{{user.screen_name}} &emsp; &emsp; {{user.point}}ポイント</p>
+                    </div>
+            {% endfor %}
         </div>
     </div>
 </div>
