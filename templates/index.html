@@ -2,8 +2,8 @@
 {% load static %}
 
 {% block customcss %}
-<link rel="stylesheet" type="text/css" href="{% static 'css/phone.css' %}" media="(max-width: 600px)">
-<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" media="(min-width:600px)" >
+<link rel="stylesheet" type="text/css" href="{% static 'css/phone.css' %}" media="screen and (max-width:600px)">
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" media="screen and (min-width:600px) and (max-width:1024px)" >
 {% endblock customcss %}
 
 {% block content %}
