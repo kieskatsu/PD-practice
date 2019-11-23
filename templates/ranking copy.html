@@ -1,12 +1,21 @@
 {% extends 'base.html' %}
-<title>サンプル2</title>
 {% load static %}
 
 {% block customcss %}
-<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" media="(max-width: 600px)">
+<link rel="stylesheet" type="text/css" href="{% static 'css/phone.css' %}">
 {% endblock customcss %}
 
 {% block content %}
+	<header>
+		<div class="head_sp">
+            <div class = "head_sb1">ランキング</div>
+			<a class ="head_sb2" href = "#unei">運営組織</a>
+			<a class ="head_sb2" href = "#sanka">参加方法</a>
+			<a class ="head_sb2" href = "#katudou">活動内容</a>
+			<a class ="head_sb2" href = "{% url 'home' %}">ホーム</a>
+		</div>
+	</header>
 <div class="split">
     <div class="split-item split-left">
         <div class="split-left__inner">

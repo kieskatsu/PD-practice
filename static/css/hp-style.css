@@ -30,7 +30,6 @@
 .head_sb2:link, .head_sb2:visited, .head_sb2:hover, .head_sb2:active {
   color: white;
   text-decoration:none;
-  
 }
 .head_sb2:hover{
 	border-bottom:solid white;
@@ -42,7 +41,7 @@
 }
 .active{
 	height:200px;
-	
+
 }
 .active1{
   padding-top:25px;
@@ -52,9 +51,9 @@
   justify-content:center;
   display:flex;
 
-  
+
 }
-	
+
 .active_contents{
 color:;
 font-size:18px;
