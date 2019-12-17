@@ -1,3 +1,3 @@
 # PD-practice
 
-### templatesファイルにHTMLファイルある
+### templatesフォルダにHTMLファイルある
