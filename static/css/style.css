@@ -26,6 +26,44 @@
 .split-right__inner{
 	height: 800px;
 }
+
+.head_sp{
+	background-color:black;
+	height:160px;
+}
+.head_sb1{
+	clear:both;
+	width:100%;
+
+	font-size:50px;
+	color:white;
+	font-weight:bold;
+	height:80px;
+	align-items:center;
+	display:flex;
+	justify-content:center;
+
+}
+.head_sb2{
+	text-decoration: none;
+	height:80px;
+	width:25%;
+	font-size:18px;
+	display:flex;
+	float:right;
+	font-weight:bolder;
+	align-items:center;
+  	justify-content: center;
+
+}
+.head_sb2:link, .head_sb2:visited, .head_sb2:hover, .head_sb2:active {
+  color: white;
+  text-decoration:none;
+  
+}
+.head_sb2:hover{
+	border-bottom:solid 3px white;
+}
 /**********************************************
 max-width:1024px
 **********************************************/

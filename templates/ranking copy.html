@@ -1,18 +1,21 @@
 {% extends 'base.html' %}
-<title>サンプル2</title>
 {% load static %}
 
 {% block customcss %}
-<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/phone.css' %}" media="screen and (max-width:600px)">
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" media="screen and (min-width:601px) and (max-width:1024px)" >
 {% endblock customcss %}
 
 {% block content %}
-<div class="split">
-    <div class="split-item split-left">
-        <div class="split-left__inner">
-            <a href="{% url 'judge' %}">> 判定しにいく</a>
-        </div>
-    </div>
+	<header>
+		<div class="head_sp">
+			<div class = "head_sb1">GudaGuda</div>
+			<a class ="head_sb2" href = "#">組織運営</a>
+			<a class ="head_sb2" href = "#">活動内容</a>
+			<a class ="head_sb2" href = "{% url 'judge' %}">判定しに行く</a>
+			<a class ="head_sb2" href = "{% url 'home' %}">ホーム</a>
+		</div>
+	</header>
     <div class="split-item split-right">
         <div class="split-right__inner">
             {% for user in object_list|slice:"10" %}
@@ -27,6 +30,5 @@
                     </div>
             {% endfor %}
         </div>
-    </div>
-</div>
+	</div>
 {% endblock content %}

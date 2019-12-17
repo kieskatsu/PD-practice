@@ -2,22 +2,31 @@
 {% load static %}
 
 {% block customcss %}
-<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/phone.css' %}" media="screen and (max-width:600px)">
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" media="screen and (min-width:601px) and (max-width:1024px)" >
 {% endblock customcss %}
 
 {% block content %}
+	<header>
+		<div class="head_sp">
+			<div class = "head_sb1">GudaGuda</div>
+			<a class ="head_sb2" href = "#">組織運営</a>
+			<a class ="head_sb2" href = "#">活動内容</a>
+			<a class ="head_sb2" href = "{% url 'ranking' %}">ランキング</a>
+			<a class ="head_sb2" href = "{% url 'home' %}">ホーム</a>
+		</div>
+	</header>
 <div class="container">
         {{ return_object.embed_code | safe }}
-    <div class="judge">
+</div>
+    <div class="container">
 {% if error %}
 {{ error }}
 {% endif %}
         <form action="{% url 'evaluate' return_object.screen_name %}" method="POST"> {% csrf_token %}
-            <button type="submit" name="judge" class="btn btn-primary btn-lg" value='True'>かわいい</button>
-            <button type="submit" name="judge" class="btn btn-secondary btn-lg" value='False'>かわいくない</button>
+            <button type="submit" name="judge" class="btn btn-primary btn-lg" value='True'>捨てた</button>
+            <button type="submit" name="judge" class="btn btn-secondary btn-lg" value='False'>捨ててない</button>
         </form>
     </div>
-    <a href="{% url 'ranking' %}">戻る</a>
-</div>
 
 {% endblock content %}

@@ -1,4 +1,4 @@
-#!usr/bin/env/python
+#!usr/bin/python
 # coding: utf-8
 import time
 import sqlite3
@@ -70,10 +70,10 @@ def save_tweets_data(list):
         traceback.print_exc()
 
 def main():
-        tweets_list = get_search_info(search=u'#かわいい動物', count=10)
+        tweets_list = get_search_info(search=u'#かわいい動物', count=1)
         save_tweets_data(tweets_list)
 
 if __name__ == '__main__':
     while 1:
         main()
-        time.sleep(20)
+        time.sleep(60)
