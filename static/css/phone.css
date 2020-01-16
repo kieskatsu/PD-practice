@@ -37,9 +37,18 @@
 }
 .image1{
 
-	height:400px;
-	background-color:skyblue;
-	font-size:50px;
+	height:350px;
+	width:100%;
+	background:url('../media/home2.jpg') no-repeat;
+	background-size:cover;
+	font-size:40px;
+	text-shadow:1px 1px 0 #000;
+	color:white;
+	font-weight:bold;
+	padding-top:20px;
+	padding-left:10px
+
+	
 }
 .active{
 	height:200px;
@@ -47,11 +56,12 @@
 }
 .active1{
   padding-top:25px;
-  font-size:170%;
+  font-size:180%;
   font-weight:bold;
   align-items:center;
   justify-content:center;
   display:flex;
+
 
   
 }
@@ -61,11 +71,14 @@ color:;
 font-size:18px;
 justify-content:center;
 display:flex;
+margin-right:18px;
+margin-left:18px;
+font-weight:500;
 
 }
 .threestep{
 	font-weight:bold;
-	font-size:160%;
+	font-size:150%;
 	align-items:center;
 	display:flex;
 	justify-content:center;
